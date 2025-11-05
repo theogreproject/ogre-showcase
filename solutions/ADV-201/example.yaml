@@ -1,0 +1,10 @@
+learner: github.com/usuario
+title: "Exemplo"
+repo_url: https://github.com/usuario/exemplo
+submitted_at: 2025-11-04
+self_assessment:
+  goals_met: ["exemplo"]
+  challenges: "exemplo"
+  next_steps: "exemplo"
+  request_feedback: "exemplo"
+tags: [adv-201, example, pt-br]
