@@ -1,0 +1,16 @@
+name: Shared checks
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 12 * * 1'  # weekly
+
+permissions: read-all
+
+jobs:
+  markdownlint:
+    uses: theogreproject/.github/.github/workflows/reusable-markdownlint.yml@main
+  links:
+    uses: theogreproject/.github/.github/workflows/reusable-lychee-links.yml@main
+  alex:
+    uses: theogreproject/.github/.github/workflows/reusable-alex.yml@main
