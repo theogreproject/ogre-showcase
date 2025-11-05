@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["learner", "title", "repo_url", "submitted_at", "self_assessment", "tags"],
+  "properties": {
+    "learner": { "type": "string", "minLength": 2 },
+    "title": { "type": "string", "minLength": 2 },
+    "repo_url": { "type": "string", "format": "uri" },
+    "submitted_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "self_assessment": {
+      "type": "object",
+      "required": ["goals_met", "challenges", "next_steps", "request_feedback"],
+      "properties": {
+        "goals_met": { "type": "array", "items": { "type": "string" } },
+        "challenges": { "type": "string" },
+        "next_steps": { "type": "string" },
+        "request_feedback": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+name: Validate showcase submissions
+on:
+  pull_request:
+    paths:
+      - "solutions/**/*.yml"
+      - "solutions/**/*.yaml"
+      - "submission.schema.json"
+  workflow_dispatch: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm init -y
+      - run: npm i ajv@8 ajv-formats@3 js-yaml@4 glob@10
+      - run: node scripts/validate.mjs

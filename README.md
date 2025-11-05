@@ -1,12 +1,21 @@
-# ogre-showcase
+# Showcase Submissions
 
-> Repositório do projeto **The Ogre Project**.
+Add your solution files under `solutions/{module-id}/`.  
+Each submission is a YAML file following the schema below.
 
-- **Org:** `the-ogre-project`
-- **Propósito:** ver o README da organização e o blueprint do projeto.
-- **Licenças:** ver abaixo.
+## Filename
+`solutions/ADV-201/your-handle.yaml`
 
-## Licença
+## Fields
+- `learner` (string, GitHub URL or handle)
+- `title` (string)
+- `repo_url` (string)
+- `submitted_at` (YYYY-MM-DD)
+- `self_assessment`:
+  - `goals_met` (string[])
+  - `challenges` (string)
+  - `next_steps` (string)
+  - `request_feedback` (string)
+- `tags` (string[])
 
-This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
-See: https://creativecommons.org/licenses/by/4.0/
+PRs are reviewed for format only. Feedback is community-driven.
